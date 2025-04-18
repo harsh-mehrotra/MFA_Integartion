@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Setup MFA</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #f4f7fa;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    .card {
+      background: white;
+      padding: 30px 40px;
+      border-radius: 12px;
+      text-align: center;
+      box-shadow: 0 0 10px rgba(0,0,0,0.05);
+      width: 350px;
+    }
+    img {
+      margin: 20px 0;
+      width: 200px;
+    }
+    button {
+      padding: 12px 24px;
+      background: #4a90e2;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #3a78c2;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h2>📱 Scan this QR</h2>
+    <p>Use Google Authenticator or Authy</p>
+    <img src="<%= qr %>" alt="QR Code" />
+    <form action="/verify" method="GET">
+      <button type="submit">Continue</button>
+    </form>
+  </div>
+</body>
+</html>
